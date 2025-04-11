@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .video-duration {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 2px 4px;
+            border-radius: 2px;
+        }
+        .hover-effect:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="flex justify-between items-center p-2 px-4">
+            <!-- Left section -->
+            <div class="flex items-center">
+                <button class="p-2 hover:bg-gray-100 rounded-full">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                <a href="#" class="flex items-center ml-4">
+                    <i class="fab fa-youtube text-red-600 text-3xl"></i>
+                    <span class="ml-1 text-xl font-bold">YouTube</span>
+                </a>
+            </div>
+
+            <!-- Middle section -->
+            <div class="flex items-center flex-grow justify-center max-w-2xl">
+                <div class="flex items-center w-full max-w-[600px]">
+                    <div class="flex items-center flex-grow">
+                        <input type="text" placeholder="Search" 
+                            class="w-full px-4 py-2 border border-gray-300 rounded-l-full focus:outline-none focus:border-blue-500">
+                        <button class="px-6 py-2 bg-gray-100 border border-l-0 border-gray-300 rounded-r-full hover:bg-gray-200">
+                            <i class="fas fa-search text-gray-600"></i>
+                        </button>
+                    </div>
+                    <button class="ml-4 p-2 hover:bg-gray-100 rounded-full">
+                        <i class="fas fa-microphone text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right section -->
+            <div class="flex items-center">
+                <button class="p-2 hover:bg-gray-100 rounded-full">
+                    <i class="fas fa-video text-xl"></i>
+                </button>
+                <button class="p-2 hover:bg-gray-100 rounded-full">
+                    <i class="fas fa-bell text-xl"></i>
+                </button>
+                <button class="p-2 ml-2">
+                    <img src="https://picsum.photos/32" alt="Profile" class="w-8 h-8 rounded-full">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="flex pt-14">
+        <!-- Sidebar -->
+        <aside class="w-64 fixed h-full bg-white overflow-y-auto hidden md:block">
+            <div class="p-2">
+                <a href="#" class="flex items-center p-2 hover:bg-gray-100 rounded-lg">
+                    <i class="fas fa-home text-xl w-8"></i>
+                    <span class="ml-4">Home</span>
+                </a>
+                <a href="#" class="flex items-center p-2 hover:bg-gray-100 rounded-lg">
+                    <i class="fas fa-compass text-xl w-8"></i>
+                    <span class="ml-4">Explore</span>
+                </a>
+                <a href="#" class="flex items-center p-2 hover:bg-gray-100 rounded-lg">
+                    <i class="fas fa-play-circle text-xl w-8"></i>
+                    <span class="ml-4">Shorts</span>
+                </a>
+                <a href="#" class="flex items-center p-2 hover:bg-gray-100 rounded-lg">
+                    <i class="fas fa-subscription text-xl w-8"></i>
+                    <span class="ml-4">Subscriptions</span>
+                </a>
+                <hr class="my-2">
+                <a href="#" class="flex items-center p-2 hover:bg-gray-100 rounded-lg">
+                    <i class="fas fa-photo-video text-xl w-8"></i>
+                    <span class="ml-4">Library</span>
+                </a>
+                <a href="#" class="flex items-center p-2 hover:bg-gray-100 rounded-lg">
+                    <i class="fas fa-history text-xl w-8"></i>
+                    <span class="ml-4">History</span>
+                </a>
+            </div>
+
+            <hr class="my-2">
+            
+            <div class="p-4">
+                <h3 class="font-medium mb-2">Subscriptions</h3>
+                <div class="flex items-center p-2 hover:bg-gray-100 rounded-lg">
+                    <img src="https://picsum.photos/24" alt="Channel" class="w-6 h-6 rounded-full">
+                    <span class="ml-4">Tech Channel</span>
+                </div>
+                <div class="flex items-center p-2 hover:bg-gray-100 rounded-lg">
+                    <img src="https://picsum.photos/24" alt="Channel" class="w-6 h-6 rounded-full">
+                    <span class="ml-4">Music Channel</span>
+                </div>
+                <div class="flex items-center p-2 hover:bg-gray-100 rounded-lg">
+                    <img src="https://picsum.photos/24" alt="Channel" class="w-6 h-6 rounded-full">
+                    <span class="ml-4">Gaming Channel</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 ml-0 md:ml-64 p-4">
+            <!-- Categories -->
+            <div class="flex gap-3 mb-4 overflow-x-auto pb-2">
+                <button class="px-4 py-1 bg-gray-900 text-white rounded-full whitespace-nowrap">All</button>
+                <button class="px-4 py-1 bg-gray-100 hover:bg-gray-200 rounded-full whitespace-nowrap">Music</button>
+                <button class="px-4 py-1 bg-gray-100 hover:bg-gray-200 rounded-full whitespace-nowrap">Gaming</button>
+                <button class="px-4 py-1 bg-gray-100 hover:bg-gray-200 rounded-full whitespace-nowrap">Live</button>
+                <button class="px-4 py-1 bg-gray-100 hover:bg-gray-200 rounded-full whitespace-nowrap">Technology</button>
+                <button class="px-4 py-1 bg-gray-100 hover:bg-gray-200 rounded-full whitespace-nowrap">Comedy</button>
+            </div>
+
+            <!-- Videos Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                <!-- Video Card -->
+                <div class="hover-effect rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img src="https://picsum.photos/320/180" alt="Thumbnail" class="w-full">
+                        <span class="video-duration text-white text-sm">12:34</span>
+                    </div>
+                    <div class="p-3">
+                        <div class="flex">
+                            <img src="https://picsum.photos/36" alt="Channel" class="w-9 h-9 rounded-full">
+                            <div class="ml-3">
+                                <h3 class="font-medium leading-tight">Amazing Video Title That Is Long Enough</h3>
+                                <p class="text-sm text-gray-600 mt-1">Channel Name</p>
+                                <p class="text-sm text-gray-600">123K views • 2 days ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Video Cards -->
+                <div class="hover-effect rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img src="https://picsum.photos/320/180" alt="Thumbnail" class="w-full">
+                        <span class="video-duration text-white text-sm">8:42</span>
+                    </div>
+                    <div class="p-3">
+                        <div class="flex">
+                            <img src="https://picsum.photos/36" alt="Channel" class="w-9 h-9 rounded-full">
+                            <div class="ml-3">
+                                <h3 class="font-medium leading-tight">Another Interesting Video Title</h3>
+                                <p class="text-sm text-gray-600 mt-1">Popular Channel</p>
+                                <p class="text-sm text-gray-600">256K views • 5 days ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hover-effect rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img src="https://picsum.photos/320/180" alt="Thumbnail" class="w-full">
+                        <span class="video-duration text-white text-sm">15:20</span>
+                    </div>
+                    <div class="p-3">
+                        <div class="flex">
+                            <img src="https://picsum.photos/36" alt="Channel" class="w-9 h-9 rounded-full">
+                            <div class="ml-3">
+                                <h3 class="font-medium leading-tight">Learn Something New Today</h3>
+                                <p class="text-sm text-gray-600 mt-1">Educational Hub</p>
+                                <p class="text-sm text-gray-600">89K views • 1 week ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hover-effect rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img src="https://picsum.photos/320/180" alt="Thumbnail" class="w-full">
+                        <span class="video-duration text-white text-sm">21:15</span>
+                    </div>
+                    <div class="p-3">
+                        <div class="flex">
+                            <img src="https://picsum.photos/36" alt="Channel" class="w-9 h-9 rounded-full">
+                            <div class="ml-3">
+                                <h3 class="font-medium leading-tight">Epic Gaming Moments Compilation</h3>
+                                <p class="text-sm text-gray-600 mt-1">Gaming Central</p>
+                                <p class="text-sm text-gray-600">432K views • 3 days ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hover-effect rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img src="https://picsum.photos/320/180" alt="Thumbnail" class="w-full">
+                        <span class="video-duration text-white text-sm">7:55</span>
+                    </div>
+                    <div class="p-3">
+                        <div class="flex">
+                            <img src="https://picsum.photos/36" alt="Channel" class="w-9 h-9 rounded-full">
+                            <div class="ml-3">
+                                <h3 class="font-medium leading-tight">Quick Recipe: Delicious Pasta</h3>
+                                <p class="text-sm text-gray-600 mt-1">Cooking Master</p>
+                                <p class="text-sm text-gray-600">167K views • 4 days ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hover-effect rounded-xl overflow-hidden">
+                    <div class="relative">
+                        <img src="https://picsum.photos/320/180" alt="Thumbnail" class="w-full">
+                        <span class="video-duration text-white text-sm">18:30</span>
+                    </div>
+                    <div class="p-3">
+                        <div class="flex">
+                            <img src="https://picsum.photos/36" alt="Channel" class="w-9 h-9 rounded-full">
+                            <div class="ml-3">
+                                <h3 class="font-medium leading-tight">Top 10 Travel Destinations 2023</h3>
+                                <p class="text-sm text-gray-600 mt-1">Travel Guide</p>
+                                <p class="text-sm text-gray-600">298K views • 1 week ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Toggle sidebar
+        document.querySelector('.fa-bars').parentElement.addEventListener('click', function() {
+            document.querySelector('aside').classList.toggle('hidden');
+            document.querySelector('main').classList.toggle('md:ml-64');
+            document.querySelector('main').classList.toggle('ml-0');
+        });
+    </script>
+</body>
+</html>
